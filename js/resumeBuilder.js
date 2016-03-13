@@ -1,3 +1,13 @@
+// Hello.
+//
+// This is JSHint, a tool that helps to detect errors and potential
+// problems in your JavaScript code.
+//
+// To start, simply enter some JavaScript anywhere on this page. Your
+// report will appear on the right side.
+//
+// Additionally, you can toggle specific options in the Configure
+// menu.
 var name = 'Eric Biel';
 
 var role = 'Apprentice Web Developer';
@@ -5,71 +15,64 @@ var role = 'Apprentice Web Developer';
 var skills = ['HTML', 'CSS', 'JavaScript', 'Office Management'];
 
 var bio = {
-	'name': 'Eric Biel',
-	'age': 26,
-	'role': 'Apprentice',
-	'contacts': {
-		'mobile': '312-513-4679',
-		'email': 'eric.j.biel@gmail.com',
-		'github': 'ejb332',
-		'twitter': 'no thanks',
-		'location': 'Chicago, IL'
-	},
-	'msg': 'Thanks for stopping by!',
-	'skills': skills,
-	'bioPic': 'images/tasty.jpg'
+    'name': 'Eric Biel',
+    'age': 26,
+    'role': 'Apprentice',
+    'contacts': {
+        'mobile': '312-513-4679',
+        'email': 'eric.j.biel@gmail.com',
+        'github': 'ejb332',
+        'twitter': 'no thanks',
+        'location': 'Chicago, IL'
+    },
+    'msg': 'Thanks for stopping by!',
+    'skills': skills,
+    'bioPic': 'images/tasty.jpg'
 };
 
 var work = {
-	'jobs': [
-		{
-			'title': 'Office Manager',
-			'employer': 'Blippar',
-			'dates': 'October 2014 - January 2016',
-			'location': 'New York, NY',
-			'description': 'Emperor of all things'
-		},
-		{
-			'title': 'Freelance Theater Technician',
-			'employer': 'Self-employed',
-			'dates': 'May 2011 - October 2014',
-			'location': 'New York, NY',
-			'description': 'Hang from precarious heights on rickety equipment'
-		}
-	]
-}
+    'jobs': [{
+        'title': 'Office Manager',
+        'employer': 'Blippar',
+        'dates': 'October 2014 - January 2016',
+        'location': 'New York, NY',
+        'description': 'Emperor of all things'
+    }, {
+        'title': 'Freelance Theater Technician',
+        'employer': 'Self-employed',
+        'dates': 'May 2011 - October 2014',
+        'location': 'New York, NY',
+        'description': 'Hang from precarious heights on rickety equipment'
+    }]
+};
 
 var education = {
-	'schools': [
-		{
-			'name': 'New York University',
-			'location': 'New York, NY',
-			'degree': 'BFA',
-			'major': 'Technical Theatre Production',
-			'dates': '2007-2011',
-			'online': {
-				'name': 'Udacity',
-				'title': 'Front-End Developer Nanodegree',
-				'dates': 'Expected completion August 2016',
-				'url': 'https://www.udacity.com/'
-			}
-		}
-	]
-}
+    'schools': [{
+        'name': 'New York University',
+        'location': 'New York, NY',
+        'degree': 'BFA',
+        'major': 'Technical Theatre Production',
+        'dates': '2007-2011',
+        'online': {
+            'name': 'Udacity',
+            'title': 'Front-End Developer Nanodegree',
+            'dates': 'Expected completion August 2016',
+            'url': 'https://www.udacity.com/'
+        }
+    }]
+};
 
 var projects = {
-	'projects': [
-		{
-			'title': 'Resume',
-			'dates': 'March 2016',
-			'description': 'JavaScript epiphany',
-			'images': [
-			'https://lawhimsy.files.wordpress.com/2015/09/epiphany-gif-via-lawhimsy.gif',
-			'http://i.imgur.com/kW5XdXo.gif'
-			]
-		}
-	]
-}
+    'projects': [{
+        'title': 'Resume',
+        'dates': 'March 2016',
+        'description': 'JavaScript epiphany',
+        'images': [
+            'https://lawhimsy.files.wordpress.com/2015/09/epiphany-gif-via-lawhimsy.gif',
+            'http://i.imgur.com/kW5XdXo.gif'
+        ]
+    }]
+};
 
 
 var googleMap;
@@ -77,10 +80,10 @@ var googleMap;
 
 // log clicks to console
 $(document).click(function(loc) {
-  var x = loc.pageX;
-  var y = loc.pageY;
+    var x = loc.pageX;
+    var y = loc.pageY;
 
-  logClicks(x,y);
+    logClicks(x, y);
 });
 
 
@@ -96,32 +99,32 @@ $(document).click(function(loc) {
 // $("#main").append(internationalizeButton);
 
 
-    var formattedName = HTMLheaderName.replace('%data%', name);
-    $('#header').append(formattedName);
+var formattedName = HTMLheaderName.replace('%data%', name);
+$('#header').append(formattedName);
 
-    var formattedRole = HTMLheaderRole .replace('%data%', role);
-    $('#header').append(formattedRole);
+var formattedRole = HTMLheaderRole.replace('%data%', role);
+$('#header').append(formattedRole);
 
-    var formattedPic = HTMLbioPic.replace('%data%', bio.bioPic);
-    $('#header').append(formattedPic);
+var formattedPic = HTMLbioPic.replace('%data%', bio.bioPic);
+$('#header').append(formattedPic);
 
-    var welcomeMsg = HTMLwelcomeMsg.replace('%data%', bio.msg);
-    $('#header').append(welcomeMsg);
+var welcomeMsg = HTMLwelcomeMsg.replace('%data%', bio.msg);
+$('#header').append(welcomeMsg);
 
-    var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
-    $('#footerContacts').append(formattedMobile);
+var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
+$('#footerContacts').append(formattedMobile);
 
-    var formattedEmail = HTMLemail.replace('%data%', bio.contacts.email);
-    $('#footerContacts').append(formattedEmail);
+var formattedEmail = HTMLemail.replace('%data%', bio.contacts.email);
+$('#footerContacts').append(formattedEmail);
 
-    var formattedGitHub = HTMLgithub.replace('%data%', bio.contacts.github);
-    $('#footerContacts').append(formattedGitHub);
+var formattedGitHub = HTMLgithub.replace('%data%', bio.contacts.github);
+$('#footerContacts').append(formattedGitHub);
 
-    var formattedTwitter = HTMLtwitter.replace('%data%', bio.contacts.twitter);
-    $('#footerContacts').append(formattedTwitter);
+var formattedTwitter = HTMLtwitter.replace('%data%', bio.contacts.twitter);
+$('#footerContacts').append(formattedTwitter);
 
-    if(bio.skills.length > 0) {
-      $('#header').append(HTMLskillsStart);
+if (bio.skills.length > 0) {
+    $('#header').append(HTMLskillsStart);
 
     var formattedSkill = HTMLskills.replace('%data%', bio.skills[0]);
     $('#skills').append(formattedSkill);
@@ -132,98 +135,98 @@ $(document).click(function(loc) {
     formattedSkill = HTMLskills.replace('%data%', bio.skills[3]);
     $('#skills').append(formattedSkill);
 
-  }
+}
 
 // creates for loop with "job" as iterator for the loop and searches
 // for the jobs array in the work object
 function displayWork() {
-  for (job in work.jobs) {
+    for (var job in work.jobs) {
 
-// appends to the "workExperience" div id in html
-    $('#workExperience').append(HTMLworkStart);
+        // appends to the "workExperience" div id in html
+        $('#workExperience').append(HTMLworkStart);
 
-// formats employer for each job by using the replace method. Note
-// the "job" iterator is used as the index of the jobs array
-    var formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[job].employer);
-    var formattedTitle = HTMLworkTitle.replace('%data%', work.jobs[job].title);
-    var formattedEmployerTitle = formattedEmployer + formattedTitle;
+        // formats employer for each job by using the replace method. Note
+        // the "job" iterator is used as the index of the jobs array
+        var formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[job].employer);
+        var formattedTitle = HTMLworkTitle.replace('%data%', work.jobs[job].title);
+        var formattedEmployerTitle = formattedEmployer + formattedTitle;
 
-// appends formatted title & employer (which were concatenated above) to the "work-entry" div class in html.
-// :last tells computer that we append to the last page
-// element with class work-entry, rather than all that have that class
-    $('.work-entry:last').append(formattedEmployerTitle);
+        // appends formatted title & employer (which were concatenated above) to the "work-entry" div class in html.
+        // :last tells computer that we append to the last page
+        // element with class work-entry, rather than all that have that class
+        $('.work-entry:last').append(formattedEmployerTitle);
 
-    var formattedLocation = HTMLworkLocation.replace('%data%', work.jobs[job].location);
-    $('.work-entry:last').append(formattedLocation);
+        var formattedLocation = HTMLworkLocation.replace('%data%', work.jobs[job].location);
+        $('.work-entry:last').append(formattedLocation);
 
-    var formattedDates = HTMLworkDates.replace('%data%', work.jobs[job].dates);
-    $('.work-entry:last').append(formattedDates);
+        var formattedDates = HTMLworkDates.replace('%data%', work.jobs[job].dates);
+        $('.work-entry:last').append(formattedDates);
 
-    var formattedDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
-    $('.work-entry:last').append(formattedDescription);
-  }
+        var formattedDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
+        $('.work-entry:last').append(formattedDescription);
+    }
 }
 
 displayWork();
 
 
 projects.display = function() {
-	for (project_iter in projects.projects) {
-		$('#projects').append(HTMLprojectStart);
+    for (var project_iter in projects.projects) {
+        $('#projects').append(HTMLprojectStart);
 
-		var formattedTitle = HTMLprojectTitle.replace('%data%', projects.projects[project_iter].title);
-		var formattedDates = HTMLprojectDates.replace('%data%', projects.projects[project_iter].dates);
-		var formattedDescription = HTMLprojectDescription.replace('%data%', projects.projects[project_iter].description);
+        var formattedTitle = HTMLprojectTitle.replace('%data%', projects.projects[project_iter].title);
+        var formattedDates = HTMLprojectDates.replace('%data%', projects.projects[project_iter].dates);
+        var formattedDescription = HTMLprojectDescription.replace('%data%', projects.projects[project_iter].description);
 
-		$('.project-entry:last').append(formattedTitle);
-		$('.project-entry:last').append(formattedDates);
-		$('.project-entry:last').append(formattedDescription);
+        $('.project-entry:last').append(formattedTitle);
+        $('.project-entry:last').append(formattedDates);
+        $('.project-entry:last').append(formattedDescription);
 
-		// if there are images present, run the for loop & append them
-		if (projects.projects[project_iter].images.length > 0) {
-			for (image in projects.projects[project_iter].images) {
-				var formattedImage = HTMLprojectImage.replace('%data%', projects.projects[project_iter].images[image]);
-				$('.project-entry:last').append(formattedImage);
-			}
-		}
-	}
-}
+        // if there are images present, run the for loop & append them
+        if (projects.projects[project_iter].images.length > 0) {
+            for (var image in projects.projects[project_iter].images) {
+                var formattedImage = HTMLprojectImage.replace('%data%', projects.projects[project_iter].images[image]);
+                $('.project-entry:last').append(formattedImage);
+            }
+        }
+    }
+};
 
 projects.display();
 
 
 function displaySchools() {
-	for (edu_iter in education.schools) {
-		$('#education').append(HTMLschoolStart);
+    for (var edu_iter in education.schools) {
+        $('#education').append(HTMLschoolStart);
 
-		var formattedSchoolName = HTMLschoolName.replace('%data%', education.schools[edu_iter].name);
-		var formattedSchoolLocation = HTMLschoolLocation.replace('%data%', education.schools[edu_iter].location);
-		var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', education.schools[edu_iter].degree);
-		var formattedSchoolMajor = HTMLschoolMajor.replace('%data%', education.schools[edu_iter].major);
-		var formattedSchoolDates = HTMLschoolDates.replace('%data%', education.schools[edu_iter].dates);
+        var formattedSchoolName = HTMLschoolName.replace('%data%', education.schools[edu_iter].name);
+        var formattedSchoolLocation = HTMLschoolLocation.replace('%data%', education.schools[edu_iter].location);
+        var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', education.schools[edu_iter].degree);
+        var formattedSchoolMajor = HTMLschoolMajor.replace('%data%', education.schools[edu_iter].major);
+        var formattedSchoolDates = HTMLschoolDates.replace('%data%', education.schools[edu_iter].dates);
 
-		$('.education-entry:last').append(formattedSchoolName);
-		$('.education-entry:last').append(formattedSchoolLocation);
-		$('.education-entry:last').append(formattedSchoolDegree);
-		$('.education-entry:last').append(formattedSchoolMajor);
-		$('.education-entry:last').append(formattedSchoolDates);
-	}
+        $('.education-entry:last').append(formattedSchoolName);
+        $('.education-entry:last').append(formattedSchoolLocation);
+        $('.education-entry:last').append(formattedSchoolDegree);
+        $('.education-entry:last').append(formattedSchoolMajor);
+        $('.education-entry:last').append(formattedSchoolDates);
+    }
 }
 
 function displayOnlineEdu() {
-	for (onl_iter in education.schools) {
-		$('.education-entry').append(HTMLonlineClasses);
+    for (var onl_iter in education.schools) {
+        $('.education-entry').append(HTMLonlineClasses);
 
-		var formattedOnlineSchool = HTMLonlineSchool.replace('%data%', education.schools[onl_iter].online.name);
-		var formattedOnlineTitle = HTMLonlineTitle.replace('%data%', education.schools[onl_iter].online.title);
-		var formattedOnlineDates = HTMLonlineDates.replace('%data%', education.schools[onl_iter].online.dates);
-		var formattedOnlineURL = HTMLonlineURL.replace('%data%', education.schools[onl_iter].online.url);
+        var formattedOnlineSchool = HTMLonlineSchool.replace('%data%', education.schools[onl_iter].online.name);
+        var formattedOnlineTitle = HTMLonlineTitle.replace('%data%', education.schools[onl_iter].online.title);
+        var formattedOnlineDates = HTMLonlineDates.replace('%data%', education.schools[onl_iter].online.dates);
+        var formattedOnlineURL = HTMLonlineURL.replace('%data%', education.schools[onl_iter].online.url);
 
-		$('.education-entry:last').append(formattedOnlineSchool);
-		$('.education-entry:last').append(formattedOnlineTitle);
-		$('.education-entry:last').append(formattedOnlineDates);
-		$('.education-entry:last').append(formattedOnlineURL);
-	}
+        $('.education-entry:last').append(formattedOnlineSchool);
+        $('.education-entry:last').append(formattedOnlineTitle);
+        $('.education-entry:last').append(formattedOnlineDates);
+        $('.education-entry:last').append(formattedOnlineURL);
+    }
 }
 
 displaySchools();
