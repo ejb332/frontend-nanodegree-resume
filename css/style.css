@@ -92,11 +92,19 @@ a {
   display: block;
 }
 
+.nav-button a {
+  display: inline;
+}
+
+#top-role {
+  color: #d8d7e1;
+}
+
 .welcome-message {
   font-style: italic;
-  font-size: 18px;
+  font-size: 24px;
   color: #f3f3f3;
-  line-height: 28px;
+  line-height: 36px;
 }
 
 #skills-h3 {
@@ -143,6 +151,10 @@ a {
 
 .center-content {
   padding: 2.5% 5%;
+}
+
+.center-text {
+  color: #0e0d0f;
 }
 
 ul {
